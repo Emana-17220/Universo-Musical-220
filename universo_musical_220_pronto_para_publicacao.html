@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101216">
+<meta name="description" content="Universo Musical 220 — A tua música, o nosso mundo!">
+<title>Universo Musical 220</title>
+<style>
+:root{--bg:#101216;--panel:#191d24;--text:#f5f5f2;--muted:#b9bec7;--gold:#f2c14e;--green:#16834a;--red:#c83b3b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#101216ed;border-bottom:1px solid #30343b;backdrop-filter:blur(10px)}
+.nav{max-width:1100px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.brand{font-weight:900;letter-spacing:.5px;font-size:1.1rem}.brand span{color:var(--gold)}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--text);text-decoration:none;font-weight:700;font-size:.94rem}nav a:hover{color:var(--gold)}
+.hero{max-width:1100px;margin:0 auto;padding:76px 22px 66px;min-height:390px;display:flex;align-items:center;background:radial-gradient(ellipse at 85% 35%,#254832 0,transparent 35%),radial-gradient(ellipse at 15% 90%,#642b2b 0,transparent 30%)}
+.hero-inner{max-width:720px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.02;margin:14px 0}h1 span{color:var(--gold)}.tag{font-size:1.2rem;color:#e1e3e7;margin:18px 0 26px}
+.button{display:inline-block;background:var(--gold);color:#171717;padding:12px 20px;border:0;border-radius:7px;text-decoration:none;font-weight:800;cursor:pointer}
+.stripe{height:5px;background:linear-gradient(90deg,var(--red) 0 33.33%,#111 33.33% 66.66%,var(--green) 66.66%)}
+main{max-width:1100px;margin:auto;padding:10px 22px 60px}.section{padding:38px 0}.section h2{font-size:1.7rem;margin:0 0 8px}.lead{color:var(--muted);margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:var(--panel);border:1px solid #2c323b;border-radius:12px;padding:20px;min-height:150px}.card h3{margin:8px 0 4px}.card p{color:var(--muted);margin:0 0 10px}
+.note{border-left:4px solid var(--gold);padding:14px 18px;background:#1b2027;border-radius:0 8px 8px 0;color:var(--muted)}
+footer{border-top:1px solid #30343b;padding:25px 22px;text-align:center;color:var(--muted)}footer strong{color:var(--text)}
+.form-card{background:var(--panel);border:1px solid #343b46;border-radius:12px;padding:20px;margin:16px 0}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+label{display:block;font-weight:700;margin:9px 0 5px}
+input,textarea{width:100%;padding:12px;border-radius:7px;border:1px solid #454d59;background:#101216;color:white;font:inherit}
+textarea{min-height:95px;resize:vertical}
+.small{font-size:.88rem;color:var(--muted)}.item-img{width:100%;height:190px;object-fit:cover;border-radius:8px;background:#0e1014;margin-bottom:10px}
+audio{width:100%;margin:10px 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.secondary{background:#343b46;color:white}.danger{background:#7b2929;color:white}
+.hidden{display:none!important}.empty{color:var(--muted);padding:18px;border:1px dashed #454d59;border-radius:10px}
+.status{margin:12px 0;padding:10px 12px;border-radius:8px;background:#1b3327;color:#b8f0c9}
+.admin-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+@media(max-width:560px){.nav{justify-content:center}nav{justify-content:center;gap:12px}.hero{padding-top:55px;min-height:340px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+  <div class="brand">UNIVERSO MUSICAL <span>220</span></div>
+  <nav aria-label="Menu principal"><a href="#inicio">Início</a><a href="#musicas">Músicas</a><a href="#artistas">Artistas</a><a href="#noticias">Notícias</a><a href="#gestao">Gestão</a><a href="#contacto">Contacto</a></nav>
+</div></header>
+<div class="stripe"></div>
+<section class="hero" id="inicio"><div class="hero-inner">
+  <div class="eyebrow">A voz da música angolana</div>
+  <h1>UNIVERSO<br><span>MUSICAL 220</span></h1>
+  <p class="tag">A tua música, o nosso mundo!</p>
+  <a class="button" href="#musicas">Explorar a plataforma</a>
+</div></section>
+<main>
+<section class="section" id="musicas"><h2>🎵 Músicas</h2><p class="lead">Descobre novos sons e acompanha os lançamentos.</p><div class="grid" id="musicList">
+<article class="card"><div class="eyebrow">Espaço de lançamento</div><h3>A tua próxima música começa aqui</h3><p>Artistas independentes podem apresentar os seus lançamentos nesta plataforma.</p><span class="small">Aguardamos a primeira publicação oficial.</span></article>
+<article class="card"><div class="eyebrow">Como funciona</div><h3>Ouve e descobre</h3><p>Quando uma música for publicada, ficará disponível aqui com capa, nome do artista e leitor de áudio.</p><span class="small">Área preparada para áudio e capas.</span></article>
+<article class="card"><div class="eyebrow">Divulgação</div><h3>Talento angolano em destaque</h3><p>Um espaço dedicado à descoberta e divulgação de novos sons de Angola.</p><span class="small">Conteúdo oficial será adicionado pela administração.</span></article>
+</div></section>
+<section class="section" id="artistas"><h2>🌟 Artistas</h2><p class="lead">Talento angolano merece ser ouvido.</p><div class="grid" id="artistList">
+<article class="card"><div class="eyebrow">Artistas</div><h3>O teu perfil pode estar aqui</h3><p>Esta área apresentará fotografias, biografias e ligações para as músicas dos artistas.</p><span class="small">Os perfis serão publicados após cadastro autorizado.</span></article>
+<article class="card"><div class="eyebrow">Comunidade</div><h3>Novos talentos</h3><p>Queremos dar visibilidade a artistas emergentes e aos seus projetos musicais.</p><span class="small">Envio de perfil através da administração.</span></article>
+</div></section>
+<section class="section" id="noticias"><h2>📰 Notícias</h2><p class="lead">Informação e novidades do universo musical.</p><div class="grid" id="newsList">
+<article class="card"><div class="eyebrow">Universo Musical 220</div><h3>Uma plataforma para a música angolana</h3><p>Este é o espaço de notícias e atualizações da plataforma. Aqui serão divulgados lançamentos, entrevistas e novidades do setor musical.</p><span class="small">A primeira notícia oficial será publicada em breve.</span></article>
+<article class="card"><div class="eyebrow">Participa</div><h3>Tens uma novidade musical?</h3><p>Artistas e agentes podem preparar informações para divulgação através da equipa do Universo Musical 220.</p><span class="small">Publicações oficiais serão identificadas nesta secção.</span></article>
+</div></section>
+<section class="section" id="gestao">
+ <div class="admin-head"><div><h2>🛠️ Painel de gestão</h2><p class="lead">Área reservada para administrar a plataforma.</p></div><button class="button secondary" id="refreshBtn" type="button">Atualizar conteúdos</button></div>
+ <div class="note">As publicações ficam numa base de dados online e podem ser vistas por todos. Só utilizadores autorizados podem publicar ou eliminar conteúdos.</div>
+ <div id="status" aria-live="polite"></div>
+ <div class="form-card" id="loginCard">
+  <h3>🔐 Acesso de administrador</h3>
+  <form id="loginForm"><label for="adminEmail">E-mail</label><input id="adminEmail" type="email" required autocomplete="username"><label for="adminPassword">Palavra-passe</label><input id="adminPassword" type="password" required autocomplete="current-password"><div class="actions"><button class="button" type="submit">Entrar</button></div></form>
+  <p class="small">A conta de administrador deve ser criada no painel de autenticação do Supabase.</p>
+ </div>
+ <div id="adminArea" class="hidden">
+  <div class="actions"><span id="adminIdentity" class="small"></span><button class="button secondary" id="logoutBtn" type="button">Terminar sessão</button></div>
+  <div class="form-card"><h3>⬆️ Publicar música</h3><form id="musicForm"><div class="form-grid">
+   <div><label for="musicTitle">Título da música *</label><input id="musicTitle" required maxlength="100"></div>
+   <div><label for="musicArtist">Nome do artista *</label><input id="musicArtist" required maxlength="100"></div>
+   <div><label for="musicAudio">Ficheiro de áudio *</label><input id="musicAudio" type="file" accept="audio/*" required></div>
+   <div><label for="musicCover">Capa (opcional)</label><input id="musicCover" type="file" accept="image/*"></div>
+  </div><p class="small">Recomendação: áudio MP3 e capas JPG/PNG comprimidas. O limite depende do armazenamento disponível no teu plano.</p><button class="button" type="submit">Publicar música</button></form></div>
+  <div class="form-card"><h3>🎤 Cadastrar artista</h3><form id="artistForm"><div class="form-grid"><div><label for="artistName">Nome do artista *</label><input id="artistName" required maxlength="100"></div><div><label for="artistPhoto">Fotografia (opcional)</label><input id="artistPhoto" type="file" accept="image/*"></div></div><label for="artistBio">Biografia</label><textarea id="artistBio" maxlength="1000"></textarea><button class="button" type="submit">Adicionar artista</button></form></div>
+  <div class="form-card"><h3>📰 Publicar notícia</h3><form id="newsForm"><label for="newsTitle">Título *</label><input id="newsTitle" required maxlength="150"><label for="newsBody">Texto da notícia *</label><textarea id="newsBody" required maxlength="5000"></textarea><button class="button" type="submit">Publicar notícia</button></form></div>
+  <div class="form-card"><h3>🗑️ Gerir publicações</h3><div id="manageList"></div></div>
+ </div>
+</section>
+<section class="section" id="contacto"><h2>📩 Contacto</h2><p class="lead">Queres divulgar a tua música ou falar connosco?</p><div class="note"><strong>Artistas, produtores e agentes:</strong> para divulgar música, cadastrar um artista ou enviar uma notícia, contacta a equipa responsável pela plataforma. Os contactos oficiais serão acrescentados aqui antes da divulgação pública.</div></section>
+</main>
+<footer><strong>UNIVERSO MUSICAL 220</strong><br>A tua música, o nosso mundo!<br>© 2026 — Plataforma musical.</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* PASSO OBRIGATÓRIO: substituir estes dois valores pelos dados do teu projeto Supabase. */
+const SUPABASE_URL = "COLOCA_AQUI_A_URL_DO_PROJETO";
+const SUPABASE_ANON_KEY = "COLOCA_AQUI_A_CHAVE_ANON_PUBLICA";
+const configured = SUPABASE_URL.startsWith("https://") && !SUPABASE_ANON_KEY.startsWith("COLOCA_");
+const supabase = configured ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+const $ = id => document.getElementById(id);
+let currentUser = null;
+function status(msg, bad=false){$('status').innerHTML='<div class="status" style="'+(bad?'background:#3b2020;color:#ffd0d0':'')+'">'+escapeHTML(msg)+'</div>'}
+function escapeHTML(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function empty(msg){return '<div class="empty">'+msg+'</div>'}
+function fileExt(file, fallback){const ext=(file?.name||'').split('.').pop().toLowerCase();return /^[a-z0-9]{1,8}$/.test(ext)?ext:fallback}
+async function uploadFile(file, folder){
+ if(!file)return null;
+ const path=folder+'/'+crypto.randomUUID()+'.'+fileExt(file, folder==='audio'?'mp3':'jpg');
+ const {error}=await supabase.storage.from('media').upload(path,file,{upsert:false,cacheControl:'3600'});
+ if(error)throw error;
+ const {data}=supabase.storage.from('media').getPublicUrl(path);
+ return data.publicUrl;
+}
+async function loadContent(){
+ if(!supabase){
+  $('musicList').innerHTML=empty('A plataforma ainda não está ligada à base de dados online.');
+  $('artistList').innerHTML=empty('Configuração online pendente.');
+  $('newsList').innerHTML=empty('Configuração online pendente.');
+  return;
+ }
+ const [m,a,n]=await Promise.all([
+  supabase.from('music').select('*').order('created_at',{ascending:false}),
+  supabase.from('artists').select('*').order('created_at',{ascending:false}),
+  supabase.from('news').select('*').order('created_at',{ascending:false})
+ ]);
+ if(m.error||a.error||n.error){status('Erro ao carregar conteúdos. Confirma a configuração SQL do Supabase.',true);return}
+ $('musicList').innerHTML=m.data.length?m.data.map(x=>`<article class="card">${x.cover_url?`<img class="item-img" src="${escapeHTML(x.cover_url)}" alt="Capa">`:''}<h3>${escapeHTML(x.title)}</h3><p>${escapeHTML(x.artist)}</p><audio controls preload="none" src="${escapeHTML(x.audio_url)}"></audio></article>`).join(''):empty('Ainda não há músicas publicadas.');
+ $('artistList').innerHTML=a.data.length?a.data.map(x=>`<article class="card">${x.photo_url?`<img class="item-img" src="${escapeHTML(x.photo_url)}" alt="Fotografia">`:''}<h3>${escapeHTML(x.name)}</h3><p>${escapeHTML(x.bio||'Artista do Universo Musical 220.')}</p></article>`).join(''):empty('Ainda não há artistas cadastrados.');
+ $('newsList').innerHTML=n.data.length?n.data.map(x=>`<article class="card"><h3>${escapeHTML(x.title)}</h3><p>${escapeHTML(x.body).replace(/\n/g,'<br>')}</p><p class="small">${new Date(x.created_at).toLocaleDateString('pt-PT')}</p></article>`).join(''):empty('Ainda não há notícias publicadas.');
+ if(currentUser)renderManage(m.data,a.data,n.data);
+}
+function renderManage(m,a,n){
+ const rows=[...m.map(x=>({table:'music',id:x.id,label:'Música: '+x.title})),...a.map(x=>({table:'artists',id:x.id,label:'Artista: '+x.name})),...n.map(x=>({table:'news',id:x.id,label:'Notícia: '+x.title}))];
+ $('manageList').innerHTML=rows.length?rows.map(x=>`<div class="actions" style="justify-content:space-between;border-bottom:1px solid #343b46;padding:8px 0"><span>${escapeHTML(x.label)}</span><button class="button danger" data-table="${x.table}" data-id="${x.id}" type="button">Eliminar</button></div>`).join(''):empty('Ainda não existem publicações para gerir.');
+}
+async function updateSession(){
+ if(!supabase)return;
+ const {data}=await supabase.auth.getSession();currentUser=data.session?.user||null;
+ $('loginCard').classList.toggle('hidden',!!currentUser);
+ $('adminArea').classList.toggle('hidden',!currentUser);
+ $('adminIdentity').textContent=currentUser?'Sessão iniciada: '+currentUser.email:'';
+ await loadContent();
+}
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();if(!supabase)return status('Configura primeiro o Supabase.',true);const {error}=await supabase.auth.signInWithPassword({email:$('adminEmail').value,password:$('adminPassword').value});if(error)return status('Não foi possível iniciar sessão: '+error.message,true);e.target.reset();await updateSession();status('Sessão iniciada.')});
+$('logoutBtn').addEventListener('click',async()=>{await supabase.auth.signOut();await updateSession();status('Sessão terminada.')});
+$('musicForm').addEventListener('submit',async e=>{e.preventDefault();try{const audio=$('musicAudio').files[0],cover=$('musicCover').files[0];if(!audio)throw Error('Escolhe um ficheiro de áudio.');const audio_url=await uploadFile(audio,'audio');const cover_url=await uploadFile(cover,'covers');const {error}=await supabase.from('music').insert({title:$('musicTitle').value.trim(),artist:$('musicArtist').value.trim(),audio_url,cover_url});if(error)throw error;e.target.reset();await loadContent();status('Música publicada para todos os visitantes.')}catch(err){status('Erro ao publicar música: '+err.message,true)}});
+$('artistForm').addEventListener('submit',async e=>{e.preventDefault();try{const photo_url=await uploadFile($('artistPhoto').files[0],'artists');const {error}=await supabase.from('artists').insert({name:$('artistName').value.trim(),bio:$('artistBio').value.trim(),photo_url});if(error)throw error;e.target.reset();await loadContent();status('Artista publicado.')}catch(err){status('Erro ao cadastrar artista: '+err.message,true)}});
+$('newsForm').addEventListener('submit',async e=>{e.preventDefault();const {error}=await supabase.from('news').insert({title:$('newsTitle').value.trim(),body:$('newsBody').value.trim()});if(error)return status('Erro ao publicar notícia: '+error.message,true);e.target.reset();await loadContent();status('Notícia publicada para todos os visitantes.')});
+$('manageList').addEventListener('click',async e=>{const b=e.target.closest('[data-table]');if(!b||!confirm('Tens a certeza de que queres eliminar esta publicação?'))return;const {error}=await supabase.from(b.dataset.table).delete().eq('id',Number(b.dataset.id));if(error)return status('Não foi possível eliminar: '+error.message,true);await loadContent();status('Publicação eliminada.')});
+$('refreshBtn').addEventListener('click',loadContent);
+if(!configured){status('Modo de apresentação ativo. Para publicar conteúdos reais e partilhados entre todos os visitantes, ainda é necessário ligar a base de dados Supabase.',true);loadContent()}
+else{updateSession();supabase.auth.onAuthStateChange(()=>updateSession())}
+</script>
+</body></html>
