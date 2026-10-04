@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101216">
+<title>Universo Musical 220</title>
+<style>
+:root{--bg:#101216;--panel:#191d24;--text:#f5f5f2;--muted:#b9bec7;--gold:#f2c14e;--green:#16834a;--red:#c83b3b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#101216ed;border-bottom:1px solid #30343b;backdrop-filter:blur(10px)}
+.nav{max-width:1100px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.brand{font-weight:900;letter-spacing:.5px;font-size:1.1rem}.brand span{color:var(--gold)}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--text);text-decoration:none;font-weight:700;font-size:.94rem}nav a:hover{color:var(--gold)}
+.hero{max-width:1100px;margin:0 auto;padding:76px 22px 66px;min-height:390px;display:flex;align-items:center;background:radial-gradient(ellipse at 85% 35%,#254832 0,transparent 35%),radial-gradient(ellipse at 15% 90%,#642b2b 0,transparent 30%)}
+.hero-inner{max-width:720px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.02;margin:14px 0}h1 span{color:var(--gold)}.tag{font-size:1.2rem;color:#e1e3e7;margin:18px 0 26px}
+.button{display:inline-block;background:var(--gold);color:#171717;padding:12px 20px;border:0;border-radius:7px;text-decoration:none;font-weight:800;cursor:pointer}
+.stripe{height:5px;background:linear-gradient(90deg,var(--red) 0 33.33%,#111 33.33% 66.66%,var(--green) 66.66%)}
+main{max-width:1100px;margin:auto;padding:10px 22px 60px}.section{padding:38px 0}.section h2{font-size:1.7rem;margin:0 0 8px}.lead{color:var(--muted);margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:var(--panel);border:1px solid #2c323b;border-radius:12px;padding:20px;min-height:150px}.icon{font-size:1.8rem}.card h3{margin:8px 0 4px}.card p{color:var(--muted);margin:0 0 10px}
+.note{border-left:4px solid var(--gold);padding:14px 18px;background:#1b2027;border-radius:0 8px 8px 0;color:var(--muted)}
+footer{border-top:1px solid #30343b;padding:25px 22px;text-align:center;color:var(--muted)}footer strong{color:var(--text)}
+.form-card{background:var(--panel);border:1px solid #343b46;border-radius:12px;padding:20px;margin:16px 0}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+label{display:block;font-weight:700;margin:9px 0 5px}
+input,textarea{width:100%;padding:12px;border-radius:7px;border:1px solid #454d59;background:#101216;color:white;font:inherit}
+textarea{min-height:95px;resize:vertical}
+.small{font-size:.88rem;color:var(--muted)}.item-img{width:100%;height:190px;object-fit:cover;border-radius:8px;background:#0e1014;margin-bottom:10px}
+audio{width:100%;margin:10px 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.secondary{background:#343b46;color:white}.danger{background:#7b2929;color:white}
+.hidden{display:none!important}.empty{color:var(--muted);padding:18px;border:1px dashed #454d59;border-radius:10px}
+.status{margin:12px 0;padding:10px 12px;border-radius:8px;background:#1b3327;color:#b8f0c9}
+.admin-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+@media(max-width:560px){.nav{justify-content:center}nav{justify-content:center;gap:12px}.hero{padding-top:55px;min-height:340px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+  <div class="brand">UNIVERSO MUSICAL <span>220</span></div>
+  <nav aria-label="Menu principal">
+    <a href="#inicio">Início</a><a href="#musicas">Músicas</a><a href="#artistas">Artistas</a><a href="#noticias">Notícias</a><a href="#gestao">Gestão</a><a href="#contacto">Contacto</a>
+  </nav>
+</div></header>
+<div class="stripe"></div>
+<section class="hero" id="inicio"><div class="hero-inner">
+  <div class="eyebrow">A voz da música angolana</div>
+  <h1>UNIVERSO<br><span>MUSICAL 220</span></h1>
+  <p class="tag">A tua música, o nosso mundo!</p>
+  <a class="button" href="#musicas">Explorar a plataforma</a>
+</div></section>
+<main>
+<section class="section" id="musicas"><h2>🎵 Músicas</h2><p class="lead">Descobre novos sons e acompanha os lançamentos.</p><div id="musicList" class="grid"></div></section>
+<section class="section" id="artistas"><h2>🌟 Artistas</h2><p class="lead">Talento angolano merece ser ouvido.</p><div id="artistList" class="grid"></div></section>
+<section class="section" id="noticias"><h2>📰 Notícias</h2><p class="lead">Informação e novidades do universo musical.</p><div id="newsList" class="grid"></div></section>
+
+<section class="section" id="gestao">
+ <div class="admin-head"><div><h2>🛠️ Painel de gestão</h2><p class="lead">Adiciona e remove conteúdos desta plataforma neste dispositivo.</p></div><button class="button secondary" id="refreshBtn" type="button">Atualizar conteúdos</button></div>
+ <div class="note">Esta versão guarda os dados no navegador/dispositivo através do armazenamento local. Ainda não existe uma base de dados online nem contas de utilizador; para publicar para todos os visitantes, será necessário alojamento e um servidor com base de dados.</div>
+ <div id="status" aria-live="polite"></div>
+ <div class="form-card">
+  <h3>⬆️ Publicar música</h3>
+  <form id="musicForm">
+   <div class="form-grid">
+    <div><label for="musicTitle">Título da música *</label><input id="musicTitle" required maxlength="100"></div>
+    <div><label for="musicArtist">Nome do artista *</label><input id="musicArtist" required maxlength="100"></div>
+    <div><label for="musicAudio">Ficheiro de áudio *</label><input id="musicAudio" type="file" accept="audio/*" required></div>
+    <div><label for="musicCover">Capa (opcional)</label><input id="musicCover" type="file" accept="image/*"></div>
+   </div><p class="small">Sugestão: usa ficheiros de áudio e imagens de tamanho moderado para não ocupar demasiado espaço no telefone.</p>
+   <button class="button" type="submit">Publicar música</button>
+  </form>
+ </div>
+ <div class="form-card">
+  <h3>🎤 Cadastrar artista</h3>
+  <form id="artistForm">
+   <div class="form-grid">
+    <div><label for="artistName">Nome do artista *</label><input id="artistName" required maxlength="100"></div>
+    <div><label for="artistPhoto">Fotografia (opcional)</label><input id="artistPhoto" type="file" accept="image/*"></div>
+   </div><label for="artistBio">Biografia</label><textarea id="artistBio" maxlength="1000"></textarea>
+   <button class="button" type="submit">Adicionar artista</button>
+  </form>
+ </div>
+ <div class="form-card">
+  <h3>📰 Publicar notícia</h3>
+  <form id="newsForm">
+   <label for="newsTitle">Título *</label><input id="newsTitle" required maxlength="150">
+   <label for="newsBody">Texto da notícia *</label><textarea id="newsBody" required maxlength="5000"></textarea>
+   <button class="button" type="submit">Publicar notícia</button>
+  </form>
+ </div>
+ <div class="form-card">
+  <h3>🗑️ Gerir publicações</h3>
+  <p class="small">Os botões abaixo removem os conteúdos guardados neste navegador.</p>
+  <div id="manageList"></div>
+ </div>
+</section>
+<section class="section" id="contacto"><h2>📩 Contacto</h2><p class="lead">Queres divulgar a tua música ou falar connosco?</p><div class="note">Para receber mensagens, adiciona aqui o endereço oficial de e-mail ou um contacto WhatsApp da plataforma antes de publicar o site.</div></section>
+</main>
+<footer><strong>UNIVERSO MUSICAL 220</strong><br>A tua música, o nosso mundo!<br>© 2026 — Plataforma musical em desenvolvimento.</footer>
+<script>
+const DB_NAME='universoMusical220DB', DB_VERSION=1;
+let db;
+const $=id=>document.getElementById(id);
+function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=()=>{const d=req.result;['music','artists','news'].forEach(s=>{if(!d.objectStoreNames.contains(s))d.createObjectStore(s,{keyPath:'id',autoIncrement:true})})};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+function store(name,mode='readonly'){return db.transaction(name,mode).objectStore(name)}
+function all(name){return new Promise((resolve,reject)=>{const r=store(name).getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+function add(name,item){return new Promise((resolve,reject)=>{const r=store(name,'readwrite').add(item);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+function remove(name,id){return new Promise((resolve,reject)=>{const r=store(name,'readwrite').delete(Number(id));r.onsuccess=()=>resolve();r.onerror=()=>reject(r.error)})}
+function url(blob){return blob?URL.createObjectURL(blob):''}
+function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function showStatus(msg){$('status').innerHTML='<div class="status">'+safe(msg)+'</div>';setTimeout(()=>$('status').innerHTML='',5000)}
+function empty(msg){return '<div class="empty">'+msg+'</div>'}
+async function render(){
+ const [music,artists,news]=await Promise.all([all('music'),all('artists'),all('news')]);
+ $('musicList').innerHTML=music.length?music.map(x=>`<article class="card">${x.cover?`<img class="item-img" src="${url(x.cover)}" alt="Capa de ${safe(x.title)}">`:''}<h3>${safe(x.title)}</h3><p>${safe(x.artist)}</p><audio controls preload="none" src="${url(x.audio)}"></audio></article>`).join(''):empty('Ainda não há músicas publicadas. As tuas publicações aparecerão aqui.');
+ $('artistList').innerHTML=artists.length?artists.map(x=>`<article class="card">${x.photo?`<img class="item-img" src="${url(x.photo)}" alt="Fotografia de ${safe(x.name)}">`:''}<h3>${safe(x.name)}</h3><p>${safe(x.bio||'Artista do Universo Musical 220.')}</p></article>`).join(''):empty('Ainda não há artistas cadastrados.');
+ $('newsList').innerHTML=news.length?news.slice().reverse().map(x=>`<article class="card"><h3>${safe(x.title)}</h3><p>${safe(x.body).replace(/\n/g,'<br>')}</p><p class="small">${new Date(x.date).toLocaleDateString('pt-PT')}</p></article>`).join(''):empty('Ainda não há notícias publicadas.');
+ const rows=[...music.map(x=>({type:'music',id:x.id,label:'Música: '+x.title})),...artists.map(x=>({type:'artists',id:x.id,label:'Artista: '+x.name})),...news.map(x=>({type:'news',id:x.id,label:'Notícia: '+x.title}))];
+ $('manageList').innerHTML=rows.length?rows.map(x=>`<div class="actions" style="justify-content:space-between;border-bottom:1px solid #343b46;padding:8px 0"><span>${safe(x.label)}</span><button class="button danger" data-delete="${x.type}" data-id="${x.id}" type="button">Eliminar</button></div>`).join(''):empty('Ainda não existem publicações para gerir.');
+}
+$('musicForm').addEventListener('submit',async e=>{e.preventDefault();const audio=$('musicAudio').files[0],cover=$('musicCover').files[0];if(!audio)return;try{await add('music',{title:$('musicTitle').value.trim(),artist:$('musicArtist').value.trim(),audio,cover:cover||null,date:Date.now()});e.target.reset();await render();showStatus('Música adicionada com sucesso neste dispositivo.')}catch(err){showStatus('Não foi possível guardar. Verifica o espaço disponível no dispositivo.')}});
+$('artistForm').addEventListener('submit',async e=>{e.preventDefault();try{await add('artists',{name:$('artistName').value.trim(),bio:$('artistBio').value.trim(),photo:$('artistPhoto').files[0]||null});e.target.reset();await render();showStatus('Artista cadastrado com sucesso.')}catch(err){showStatus('Não foi possível guardar o artista.')}});
+$('newsForm').addEventListener('submit',async e=>{e.preventDefault();try{await add('news',{title:$('newsTitle').value.trim(),body:$('newsBody').value.trim(),date:Date.now()});e.target.reset();await render();showStatus('Notícia publicada neste dispositivo.')}catch(err){showStatus('Não foi possível guardar a notícia.')}});
+$('manageList').addEventListener('click',async e=>{const b=e.target.closest('[data-delete]');if(!b)return;if(confirm('Tens a certeza de que queres eliminar esta publicação?')){await remove(b.dataset.delete,b.dataset.id);await render();showStatus('Publicação eliminada.')}});
+$('refreshBtn').addEventListener('click',render);
+(async()=>{try{db=await openDB();await render()}catch(e){showStatus('O navegador não permitiu o armazenamento local. Experimenta abrir o ficheiro num navegador atualizado.')}})();
+</script>
+</body></html>
