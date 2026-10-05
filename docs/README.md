@@ -1,83 +1,47 @@
-# Universo Musical 220
+# Documentação do projeto
 
-Plataforma musical em estilo landing page para divulgar artistas, músicas e notícias do cenário musical angolano. O projeto está preparado para funcionar como site estático e, quando configurado, conecta-se ao Supabase para gerenciamento de conteúdos em tempo real.
+Esta pasta reúne a documentação técnica, operacional e comercial do projeto Universo Musical 220.
+
+## Objetivo da documentação
+
+A documentação foi organizada para apoiar três cenários principais:
+
+1. visualização do projeto e compreensão do funcionamento geral
+2. configuração de serviços externos, como Supabase
+3. publicação em ambientes de produção, como GitHub Pages
+
+## Índice da documentação
+
+- [Configuração do Supabase](configuracao-supabase.md)
+- [Deploy no GitHub Pages](github-pages-deploy.md)
+- [Guia de apresentação](guia-apresentacao.md)
+- [Schema de base de dados](database.sql)
 
 ## Visão geral
 
-O repositório contém uma página web principal com as seguintes áreas:
+O projeto consiste em uma plataforma musical de apresentação pública com painel administrativo. Ele foi construído para funcionar em modo estático e, quando configurado, usar o Supabase para autenticação, armazenamento e gestão dinâmica de conteúdos.
 
-- Início
-- Músicas
-- Artistas
-- Notícias
-- Gestão/Administração
-- Contacto
+## Estrutura dos ficheiros principais
 
-Além disso, o site possui um painel administrativo para:
+- `../README.md` — apresentação geral do repositório
+- `../index-9.html` — página pública principal
+- `../universo_musical_220_pronto_para_publicacao.html` — versão final preparada para publicação
+- `../LICENSE` — licença do projeto
 
-- publicar músicas
-- cadastrar artistas
-- publicar notícias
-- remover itens já divulgados
+## Fluxo recomendado
 
-## Estrutura do projeto
+1. Revisar a landing page em modo estático.
+2. Configurar o Supabase para dados e autenticação.
+3. Validar o painel administrativo.
+4. Publicar a plataforma em GitHub Pages ou outro host estático.
 
-- `README.md` — documentação principal do projeto
-- `index-9.html` — página pública principal
-- `universo_musical_220_pronto_para_publicacao.html` — versão alternativa/produção pronta para publicação
-- `LICENSE` — licença do projeto
-- `docs/` — documentação complementar da plataforma
+## Ordem recomendada de leitura
 
-## Como funciona
+- [Guia de apresentação](guia-apresentacao.md) — visão executiva e comercial
+- [Configuração do Supabase](configuracao-supabase.md) — setup técnico
+- [Deploy no GitHub Pages](github-pages-deploy.md) — publicação em produção
+- [Schema de base de dados](database.sql) — estrutura de dados
 
-O projeto foi desenvolvido para funcionar em duas fases:
+## Observações finais
 
-1. Modo apresentação
-   - a página exibe conteúdo estático ou placeholders
-   - pode ser aberta diretamente em um navegador
-
-2. Modo integrado com Supabase
-   - o frontend usa `@supabase/supabase-js`
-   - a base de dados armazena músicas, artistas e notícias
-   - o painel administrativo permite autenticação, publicação e gestão
-
-## Configuração rápida
-
-1. Abra o arquivo HTML que pretende utilizar.
-2. No código JavaScript, substitua os valores:
-   - `SUPABASE_URL`
-   - `SUPABASE_ANON_KEY`
-3. Crie as tabelas no Supabase usando o script em `docs/database.sql`.
-4. Configure o bucket de storage `media` para arquivos de áudio e imagem.
-5. Publique o projeto em GitHub Pages, Netlify, Vercel ou outro host estático.
-
-## Documentação
-
-- [Documentação geral](docs/README.md)
-- [Configuração do Supabase](docs/configuracao-supabase.md)
-- [Deploy no GitHub Pages](docs/github-pages-deploy.md)
-- [Schema SQL](docs/database.sql)
-
-## Observações importantes
-
-O código atual inclui placeholders para a configuração do Supabase:
-
-```js
-const SUPABASE_URL = "COLOCA_AQUI_A_URL_DO_PROJETO";
-const SUPABASE_ANON_KEY = "COLOCA_AQUI_A_CHAVE_ANON_PUBLICA";
-```
-
-Sem esses valores, o painel administrativo fica em modo de apresentação e não publica conteúdo real.
-
-## Licença
-
-Este projeto está licenciado sob os termos da licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
-
-## Próximos passos sugeridos
-
-- criar um painel visual para edição de textos
-- permitir upload de capas e áudios com validação mais forte
-- integrar autenticação por e-mail e password com roles administrativas
-- adicionar SEO e otimização para pesquisa em motores de busca
-- preparar deploy automático em produção
-
+A documentação está organizada para permitir uma transição fluida entre apresentação, desenvolvimento e publicação. Isso facilita tanto a apresentação do projecto a parceiros como a implementação em produção.
