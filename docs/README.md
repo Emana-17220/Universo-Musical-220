@@ -14,6 +14,7 @@ A documentação foi organizada para apoiar três cenários principais:
 
 - [Configuração do Supabase](configuracao-supabase.md)
 - [Deploy no GitHub Pages](github-pages-deploy.md)
+- [Preparação para publicação pública](publicacao-final.md)
 - [Guia de apresentação](guia-apresentacao.md)
 - [Schema de base de dados](database.sql)
 
@@ -24,7 +25,8 @@ O projeto consiste em uma plataforma musical de apresentação pública com pain
 ## Estrutura dos ficheiros principais
 
 - `../README.md` — apresentação geral do repositório
-- `../index-9.html` — página pública principal
+- `../index.html` — página pública principal para deploy
+- `../index-9.html` — versão de desenvolvimento/alternativa
 - `../universo_musical_220_pronto_para_publicacao.html` — versão final preparada para publicação
 - `../LICENSE` — licença do projeto
 
@@ -40,6 +42,7 @@ O projeto consiste em uma plataforma musical de apresentação pública com pain
 - [Guia de apresentação](guia-apresentacao.md) — visão executiva e comercial
 - [Configuração do Supabase](configuracao-supabase.md) — setup técnico
 - [Deploy no GitHub Pages](github-pages-deploy.md) — publicação em produção
+- [Preparação para publicação pública](publicacao-final.md) — checklist final
 - [Schema de base de dados](database.sql) — estrutura de dados
 
 ## Observações finais
